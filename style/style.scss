@@ -398,20 +398,22 @@ img {
 	background: rgba(0,0,0,0.7);
 	transition: opacity .7s ease;
 	
-		a {
+		.slideshow-start {
+			cursor: pointer;
+			width: 35%;
+			margin: 0 32.5%;
 			text-decoration: none;
 			background: rgba(255,255,255,0.9);
 			color: black;
 			padding: 5px 7px;
 			font-size: 1.8rem;
-			margin: 10px;
 		}
 
 		h5 {
 			font-size: 0.85rem;
 			margin-top: 15%;
 			margin-bottom: 5%;
-			padding-top: 7%;
+			padding-top: 3%;
 			text-transform: uppercase;
 			letter-spacing: 0.05rem;
 			transition: color .7s;
@@ -804,6 +806,17 @@ img {
 
 // FOOTER FLAG END
 
+@media (min-width: 1600px) and (orientation: landscape)  {
+	.gallery-square figcaption,
+	.gallery-rectangle figcaption {
+		padding-top: 10%;
+
+		h5 {
+			padding-top: 0;
+		}
+	}
+}
+
 @media screen and (max-width: 1100px) {
 	.mooseLogoSmall {
 		&:before  {
@@ -867,6 +880,7 @@ img {
 		z-index: 10;
 		color: white;
 		padding-right: 30px;
+		cursor: pointer;
 	}
 
 	.closeNav {

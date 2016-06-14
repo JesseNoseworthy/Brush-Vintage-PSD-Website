@@ -574,20 +574,22 @@ img {
   transition: opacity .7s ease;
 }
 
-.gallery-square figcaption a, .gallery-rectangle figcaption a {
+.gallery-square figcaption .slideshow-start, .gallery-rectangle figcaption .slideshow-start {
+  cursor: pointer;
+  width: 35%;
+  margin: 0 32.5%;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.9);
   color: black;
   padding: 5px 7px;
   font-size: 1.8rem;
-  margin: 10px;
 }
 
 .gallery-square figcaption h5, .gallery-rectangle figcaption h5 {
   font-size: 0.85rem;
   margin-top: 15%;
   margin-bottom: 5%;
-  padding-top: 7%;
+  padding-top: 3%;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   transition: color .7s;
@@ -1023,6 +1025,17 @@ img {
   font-size: 0.65rem;
 }
 
+@media (min-width: 1600px) and (orientation: landscape) {
+  .gallery-square figcaption,
+  .gallery-rectangle figcaption {
+    padding-top: 10%;
+  }
+  .gallery-square figcaption h5,
+  .gallery-rectangle figcaption h5 {
+    padding-top: 0;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .mooseLogoSmall:before {
     left: 25%;
@@ -1087,6 +1100,7 @@ img {
     z-index: 10;
     color: white;
     padding-right: 30px;
+    cursor: pointer;
   }
   .closeNav {
     visibility: visible;
