@@ -10,7 +10,19 @@ smoothScroll = function() {
 
 brush.slideshowStart = function() {
 	$('.slideshow-start').on('click', function() {
-		console.log('success');
+		$('.portfolio').addClass('hide-portfolio');
+		$('.flickity-container').addClass('show-flickity');
+		$('.flickity').addClass('show-flickity');
+		$('.flickity-viewport').addClass('show-flickity');
+	});
+}
+
+brush.closeSlideshow = function() {
+	$('.close-slideshow').on('click', function() {
+		$('.portfolio').removeClass('hide-portfolio');
+		$('.flickity-container').removeClass('show-flickity');
+		$('.flickity').removeClass('show-flickity');
+		$('.flickity-viewport').removeClass('show-flickity');
 	});
 }
 
@@ -31,8 +43,8 @@ brush.flickity = function() {
 		wrapAround: true,
 		initialIndex: 3,
 		imagesLoaded: true,
-		autoPlay: true,
-		autoPlay: 1500,
+		// autoPlay: true,
+		// autoPlay: 1500
 	});
 }
 
@@ -51,13 +63,14 @@ brush.newsletterSubmit = function() {
 	});
 
 	$('.messageContinue').on('click', function() {
-		
+
 		$('.message').toggleClass('showMessage').find('p').text("");
 	});
 }
 
 brush.init = function() {
 	brush.slideshowStart();
+	brush.closeSlideshow();
 	brush.navToggle();
 	brush.flickity();
 	smoothScroll();
