@@ -10,7 +10,6 @@ smoothScroll = function() {
 
 brush.slideshowStart = function() {
 	$('.slideshow-start').on('click', function() {
-		$('.portfolio').addClass('hide-portfolio');
 		$('.flickity-container').addClass('show-flickity');
 		$('.flickity').addClass('show-flickity');
 		$('.flickity-viewport').addClass('show-flickity');
@@ -19,7 +18,6 @@ brush.slideshowStart = function() {
 
 brush.closeSlideshow = function() {
 	$('.close-slideshow').on('click', function() {
-		$('.portfolio').removeClass('hide-portfolio');
 		$('.flickity-container').removeClass('show-flickity');
 		$('.flickity').removeClass('show-flickity');
 		$('.flickity-viewport').removeClass('show-flickity');
