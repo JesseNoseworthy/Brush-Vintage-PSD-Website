@@ -1246,6 +1246,7 @@ img {
   }
   .footerContent .footerItems {
     width: calc(100% / 2 - 40px);
+    height: auto;
   }
   .footerContent .footerItems h1 {
     padding-top: 25px;
